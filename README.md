@@ -6,7 +6,9 @@ allows to control it from the comfort of your preferred text editor.
 The resulting code can then be copied to the source files
 with minimal adjustments required.
 
-<!-- more -->
+### Collaborate
+
+Contributors are welcome and get push access once their first commit is accepted.
 
 ### Installation
 
@@ -39,12 +41,14 @@ However, it is less convenient for redefining logic.
 In this case is possible to include the `#nodiff` magic
 comment, which forces to send the whole file.
 
-### Collaborate
+### Known Caveats
 
-Contributors are welcome and get push access once their first commit is accepted.
+- The code is interacting with REPL through a leaky abstraction. For example, using the nodiff mode in the demo shown in the video would result in new views being created every time the file is saved.
+- Methods and classes which are not actually used by the compiled code might be striped and thus will not be available at runtime.
+- Long declarations might choke the REPL and crash the simulator.
+- This is a 0.1 release.
 
 ### License
 
 The project is available under the MIT license.
-
 
